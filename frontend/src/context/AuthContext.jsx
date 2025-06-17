@@ -8,7 +8,7 @@ export const AuthProvider = ({ children }) => {
 
   const checkAuth = async () => {
     try {
-      const response = await axios.get('/api/users/current-user', {
+      const response = await axios.get('https://newcode-algo-backend.onrender.com/api/users/current-user', {
         withCredentials: true
       });
       if (response.data.success) {
