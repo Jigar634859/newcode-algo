@@ -29,7 +29,7 @@ const Register = () => {
     setError('')
 
     try {
-      const response = await axios.post('/api/users/register', formData)
+      const response = await axios.post('https://newcode-algo-backend.onrender.com/api/users/register', formData)
       
       if (response.data.success) {
         // Registration successful
