@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:4000',
+        target: 'https://newcode-algo-backend.onrender.com',
         secure: false,
         changeOrigin: true
       }
