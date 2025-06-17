@@ -35,7 +35,7 @@ const Login = () => {
         password: formData.password
       }
 
-      const response = await axios.post('/api/users/login', loginData)
+      const response = await axios.post('https://newcode-algo-backend.onrender.com/api/users/login', loginData)
       
       if (response.data.success) {
         login() // Update auth state
