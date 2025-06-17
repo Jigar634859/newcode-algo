@@ -80,14 +80,18 @@ const loginUser = asyncHandler(async (req, res) =>{
    const {accessToken, refreshToken} = await generateAccessAndRefereshTokens(user._id)
 
     const loggedInUser = await User.findById(user._id).select("-password -refreshToken")
-    const options = {
-        httpOnly: true,
-        secure: true
-    }
+    const cookieOptions = {
+  httpOnly: true,
+  secure: true,               // Required for HTTPS
+  sameSite: "None",           // Required for cross-site cookies
+  path: "/",                  // Optional but recommended
+  maxAge: 7 * 24 * 60 * 60 * 1000 // Optional: 7 days in milliseconds
+};
+
     return res
     .status(200)
-    .cookie("accessToken", accessToken, options)
-    .cookie("refreshToken", refreshToken, options)
+    .cookie("accessToken", accessToken, cookieOptions)
+    .cookie("refreshToken", refreshToken, cookieOptions)
     .json(
         new ApiResponse(
             200, 
