@@ -9,7 +9,7 @@ const Topbar = () => {
 
   const handleLogout = async () => {
     try {
-      await axios.post('/api/users/logout', {}, {
+      await axios.post('https://newcode-algo-backend.onrender.com/api/users/logout', {}, {
         withCredentials: true 
       });
       logout();
