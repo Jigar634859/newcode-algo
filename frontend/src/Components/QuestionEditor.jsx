@@ -67,7 +67,7 @@ export default function QuestionEditor({
         });
 
         const response = await axios.post(
-          '/api/code/execute',
+          'https://newcode-algo-backend.onrender.com/api/code/execute',
           {
             code,
             language: lang.name.toLowerCase() === 'c++' ? 'cpp' : lang.name.toLowerCase(),
