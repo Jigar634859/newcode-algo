@@ -5,10 +5,12 @@ import { ApiError } from './utils/ApiError.js';
 
 const app = express();
 
+
+
 app.use(cors({
-    origin: true, 
-    credentials: true
-}))
+  origin: "https://newcode-algo.onrender.com", // your frontend URL
+  credentials: true
+}));
 
 
 app.use(express.json({limit:"16kb"}))
