@@ -42,8 +42,8 @@ const Login = () => {
         }
       })
       
-      if (response.data.success) {
-        login() // Update auth state
+       if (response.data.success) {
+        login(response.data.data.user) // Pass user data to login function
         navigate('/')
       }
     } catch (error) {
