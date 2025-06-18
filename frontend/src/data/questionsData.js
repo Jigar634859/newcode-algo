@@ -10,10 +10,10 @@ export const questions = [
       { input: "-1\n1\n", expectedOutput: "0\n" }
     ],
     starterCode: {
-      javascript: "// Write your code here\nfunction add(a, b) {\n  // Your code here\n}\n\n// Read input\nconst a = parseInt(readline());\nconst b = parseInt(readline());\n\n// Print output\nconsole.log(add(a, b));",
-      python: "# Write your code here\ndef add(a, b):\n    # Your code here\n    pass\n\n# Read input\na = int(input())\nb = int(input())\n\n# Print output\nprint(add(a, b))",
-      cpp: "// Write your code here\n#include <iostream>\nusing namespace std;\n\nint add(int a, int b) {\n    // Your code here\n}\n\nint main() {\n    int a, b;\n    cin >> a >> b;\n    cout << add(a, b) << endl;\n    return 0;\n}",
-      java: "// Write your code here\nimport java.util.*;\n\npublic class Main {\n    public static int add(int a, int b) {\n        // Your code here\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        System.out.println(add(a, b));\n    }\n}"
+       javascript: "// Write your code here",
+      python: "# Write your code here",
+      cpp: "// Write your code here",
+      java: "// Write your code here"
     }
   },
   {
@@ -27,10 +27,10 @@ export const questions = [
       { input: "0\n0\n0\n", expectedOutput: "0\n" }
     ],
     starterCode: {
-      javascript: "// Write your code here\nfunction findMax(a, b, c) {\n  // Your code here\n}\n\n// Read input\nconst a = parseInt(readline());\nconst b = parseInt(readline());\nconst c = parseInt(readline());\n\n// Print output\nconsole.log(findMax(a, b, c));",
-      python: "# Write your code here\ndef find_max(a, b, c):\n    # Your code here\n    pass\n\n# Read input\na = int(input())\nb = int(input())\nc = int(input())\n\n# Print output\nprint(find_max(a, b, c))",
-      cpp: "// Write your code here\n#include <iostream>\nusing namespace std;\n\nint findMax(int a, int b, int c) {\n    // Your code here\n}\n\nint main() {\n    int a, b, c;\n    cin >> a >> b >> c;\n    cout << findMax(a, b, c) << endl;\n    return 0;\n}",
-      java: "// Write your code here\nimport java.util.*;\n\npublic class Main {\n    public static int findMax(int a, int b, int c) {\n        // Your code here\n    }\n\n    public static void main(String[] args) {\n        Scanner sc = new Scanner(System.in);\n        int a = sc.nextInt();\n        int b = sc.nextInt();\n        int c = sc.nextInt();\n        System.out.println(findMax(a, b, c));\n    }\n}"
+      javascript: "// Write your code here",
+      python: "# Write your code here",
+      cpp: "// Write your code here",
+      java: "// Write your code here"
     }
   }
 ]; 
