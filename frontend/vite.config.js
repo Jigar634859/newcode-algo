@@ -6,13 +6,5 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss(),
   ],
-  server: {
-    proxy: {
-      '/api': {
-        target: 'https://newcode-algo-backend.onrender.com',
-        secure: false,
-        changeOrigin: true
-      }
-    }
-  }
+ 
 })
