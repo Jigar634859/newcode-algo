@@ -9,7 +9,7 @@ import './App.css';
 const languages = [
   { id: 63, name: 'JavaScript' },
   { id: 71, name: 'Python' },
-  { id: 53, name: 'C++' },
+  { id: 53, name: 'cpp' },
   { id: 62, name: 'Java' },
 ];
 
