@@ -5,8 +5,7 @@ import { useAuth } from '../context/AuthContext';
 
 const Topbar = () => {
   const navigate = useNavigate();
-  const { isAuthenticated, logout } = useAuth();
-
+  const { isAuthenticated, logout, user } = useAuth();
   const handleLogout = async () => {
     try {
       await axios.post('https://newcode-algo-backend.onrender.com/api/users/logout', {}, {
@@ -32,12 +31,15 @@ const Topbar = () => {
 
           <div className="flex items-center space-x-4">
             {isAuthenticated ? (
-              <button
-                onClick={handleLogout}
-                className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors duration-200"
-              >
-                Logout
-              </button>
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-700">Welcome, {user?.username}</span>
+                <button
+                  onClick={handleLogout}
+                  className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition-colors duration-200"
+                >
+                  Logout
+                </button>
+              </div>
             ) : (
               <>
                 <Link to="/login">
