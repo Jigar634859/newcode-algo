@@ -5,7 +5,7 @@ const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const [user, setUser] = useState(null);
   const checkAuth = async () => {
     try {
       const response = await axios.get('https://newcode-algo-backend.onrender.com/api/users/current-user', {
@@ -13,9 +13,11 @@ export const AuthProvider = ({ children }) => {
       });
       if (response.data.success) {
         setIsAuthenticated(true);
+        setUser(response.data.data);
       }
     } catch (error) {
       setIsAuthenticated(false);
+      setUser(null);
     }
   };
 
@@ -23,16 +25,18 @@ export const AuthProvider = ({ children }) => {
     checkAuth();
   }, []);
 
-  const login = () => {
+ const login = (userData) => {
     setIsAuthenticated(true);
+    setUser(userData);
   };
 
   const logout = () => {
     setIsAuthenticated(false);
+    setUser(null);
   };
 
   return (
-    <AuthContext.Provider value={{ isAuthenticated, login, logout, checkAuth }}>
+    <AuthContext.Provider value={{ isAuthenticated, user, login, logout, checkAuth }}>
       {children}
     </AuthContext.Provider>
   );
